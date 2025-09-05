@@ -6,11 +6,12 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "npm run build && node dist/example.js"
+    "dev": "npm run build && node dist/example.js",
+    "test": "echo \"No tests\" && exit 0",
+    "prepublishOnly": "npm run build && npm test"
   },
   "dependencies": {
-    "ethers": "^6.15.0",
-    "ethers-wallet-ts-package": "^0.1.9"
+    "ethers": "^6.15.0"
   },
   "devDependencies": {
     "typescript": "^5.9.2"
